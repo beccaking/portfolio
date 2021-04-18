@@ -3,3 +3,4 @@
 #### Front end web development (1 year)
 #### HTML, CSS, JavaScript
 #### CSS Preprocessors (i.e. Less)
+#### Some experience with SQL, Progress OpenEdge, PHP
