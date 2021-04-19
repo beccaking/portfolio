@@ -1,9 +1,9 @@
-if(window.innerWidth >750){
+if($(window).width()> 750){
   $('#logo').append($('ul'))
-}
+} 
 
 $(window).resize(function(){
-  if(window.innerWidth > 750){
+  if($(window).width() > 750){
     $('#logo').append($('ul'))
   } else {
     $('main').prepend($('ul'))
@@ -32,6 +32,11 @@ function rotate () {
 let cardInterval = setInterval(rotate, 5000);
 
 // Set the interval to stop when you click an off-screen button
+
+$('.off-screen').on('click', function(){
+  clearInterval(cardInterval)
+})
+
 // Allow user to select one of the cards by clicking the dot
 // for(j=0;j<cards.length;j++){
 //
