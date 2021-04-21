@@ -3,7 +3,10 @@
   color: #eaeaea;
   font-family: 'Open Sans', Arial, helvetica, sans-serif;
 }
-
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
 #logo {
   background-image: url('webdev-emile-perron.jpg');
   background-size: cover;
@@ -75,8 +78,31 @@ h3 {
 
 .off-screen {
   position: absolute;
-  left: 100000px;
+  right: 10000px;
 }
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+  background: none;
+  padding: 2%;
+}
+.links a,
+.links span {
+  background: none;
+}
+.links span.diamond {
+  background: whitesmoke;
+  height: 7px;
+  width: 7px;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+.links a {
+  margin: 8px;
+}
+
 @media only screen and (min-width: 750px){
  #logo {
    height: 600px;
@@ -110,5 +136,8 @@ h3 {
  }
  .carousel div {
    height: 100px;
+ }
+ .links {
+   width: 32%;
  }
 }

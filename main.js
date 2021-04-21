@@ -1,12 +1,15 @@
 if($(window).width()> 750){
   $('#logo').append($('ul'))
-} 
+  $('#logo').append($('.links'))
+}
 
 $(window).resize(function(){
   if($(window).width() > 750){
     $('#logo').append($('ul'))
+    $('#logo').append($('.links'))
   } else {
     $('main').prepend($('ul'))
+    $('footer').append($('.links'))
   }
 })
 
@@ -37,14 +40,6 @@ $('.off-screen').on('click', function(){
   clearInterval(cardInterval)
 })
 
-// Allow user to select one of the cards by clicking the dot
-// for(j=0;j<cards.length;j++){
-//
-//   dots[j].addEventListener('click', function(){
-//
-//     $('.carousel div').removeClass('active')
-//     $('.carousel-dots span').removeClass('active')
-//
-//     $(this).addClass('active')
-//   })
-// }
+$('.carousel').on('drag', function(){
+  $('.carousel div').show();
+})
