@@ -28,15 +28,6 @@ h1, h2 {
 h2 {
   margin-left: 2%;
 }
-#headshot {
-  background-image: url('headshot.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 500px;
-  width: 90%;
-  margin: 10px auto;
-  border-radius: 10px;
-}
 h3 {
   text-align: center;
   border-bottom: 1px solid whitesmoke;
@@ -44,24 +35,49 @@ h3 {
   font-size: 23px;
   white-space: nowrap;
 }
-.carousel div {
-  display: none;
+main {
+  height: 390px;
+}
+ul {
+  padding: 1%;
+}
+li {
+  list-style: none;
+}
+.card {
+  display: flex;
   text-align: center;
-  padding: 15%;
   box-shadow: 1px 1px 1px #585858, 1px 1px 3px white;
   background-image: linear-gradient(#6a6769, #414242);
   color: #060606;
   font-weight: bold;
-  height: 50px;
+  height: 147px;
   margin-bottom: 10px;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.carousel div.active {
+.card img {
+  width: 109px;
+  border: 1px solid #414242;
+}
+.contact,
+.contact a,
+.contact span {
+  background: none;
+}
+.contact {
   display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: right;
+  line-height: 30px;
+}
+.intro {
+  display: none;
 }
 .carousel-dots {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 .carousel-dots span {
@@ -75,18 +91,12 @@ h3 {
 .carousel-dots span.active {
   background-color: #212121;
 }
-
-.off-screen {
-  position: absolute;
-  right: 10000px;
-}
 .links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   background: none;
-  padding: 2%;
 }
 .links a,
 .links span {
@@ -94,15 +104,17 @@ h3 {
 }
 .links span.diamond {
   background: whitesmoke;
-  height: 7px;
-  width: 7px;
+  height: 10px;
+  width: 10px;
   transform: rotate(45deg);
-  margin: 0 auto;
+  margin: 17px auto;
 }
 .links a {
   margin: 8px;
 }
-
+footer {
+  border-top: 1px dashed whitesmoke;
+}
 @media only screen and (min-width: 750px){
  #logo {
    height: 600px;
@@ -115,29 +127,39 @@ h3 {
    background: none;
    list-style: none;
  }
- .column {
-   width: 38%;
-   margin-left: 5%;
- }
- .row {
-   display: flex;
-   align-items: center;
- }
- #headshot {
-   width: 40%;
-   background-position: center;
-   float: right;
- }
  h3 {
-   width: 80%;
    margin: 2% auto;
-   border-top: none;
-   border-bottom: none;
+   padding: 2%;
  }
  .carousel div {
-   height: 100px;
+   padding: 0;
+   justify-content: center;
  }
  .links {
    width: 32%;
+   flex-direction: column;
+ }
+ .links a {
+   margin: 0;
+ }
+ .card {
+   height: auto;
+ }
+ .card img {
+   width: 332px;
+   border: none;
+   box-shadow: 1px 1px 2px whitesmoke;
+ }
+ .intro,
+ .intro span {
+   background: none;
+ }
+ .intro {
+   display: block;
+   text-align: left;
+   padding: 10%;
+ }
+ footer {
+   border-top: none;
  }
 }
